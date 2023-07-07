@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+  </head>
+<body>
+    <form method="post" action="/saveEdited/<%= expense._id %>">
+        <div class="form-group">
+            <label for="name">Title:</label>
+            <input type="string" class="form-control" id="title1" name="title" value="<%= expense.title%>" placeholder="Enter title">
+        </div>
+        <div class="form-group">
+            <label for="paidBy">Paid by:</label>
+            <select class="form-control" id="paidBy1" value="<%= expense.paidBy%>" name="paidBy">
+                <option>Aayesha</option>
+                <option>Suvu</option>
+                <option>Sonika</option>
+              </select>
+        </div>
+        <div class="form-group">
+            <label for="description">Description:</label>
+            <input type="string" class="form-control" id="description" name="description" value="<%= expense.description%>" placeholder="Enter description">
+        </div>
+        <div class="form-group">
+            <label for="amount">Amount:</label>
+            <input type="string" class="form-control" id="amount" name="amount" value="<%= expense.amount%>" placeholder="Enter amount">
+        </div>
+
+        <button type="submit" class="btn btn-success">Update</button>
+    </form>
+</body>
+</html>
+
